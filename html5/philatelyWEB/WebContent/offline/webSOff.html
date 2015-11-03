@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html manifest="philately.appcache">
+	<head>
+		<meta charset=utf-8>
+		<link href="../css5/model5.css" rel="stylesheet" type="text/css" media="screen" />
+		<script src="/aplikacijaDodatak/JS/philately.js"></script>
+		<title>Offline Stamps</title>
+	</head>
+	<body>
+
+
+
+			<header>
+				
+			</header>
+
+			<div id="headerLine">
+			</div>
+
+		<article>
+			
+				<div id="listaRezultata">
+				</div>
+				
+			
+		</article>
+	
+		<nav>
+			     
+
+		</nav>
+
+		
+			<div id="footerLine">
+			</div>
+
+			<footer>	
+				
+			</footer>
+	
+
+			<script>
+
+				var db;
+
+				var imeB="philately";
+				var verzija=1.0;
+				var opisBaze="Filatelija_baza";
+				var velicina=3 * 1024 * 1024;
+
+
+
+				function napraviBazu(){	
+					
+					if(window.openDatabase){
+						db = openDatabase(imeB, verzija, opisBaze, velicina);
+								
+						vratiListu(db);
+						
+						}
+					else{
+					alert("Vas pregledavac ne podrzava WebSQL!!!");
+					}
+				}
+					
+				
+				function vratiListu(db) {
+					
+				var list = document.getElementById("listaRezultata");
+				var idStamp;
+				var idCatalog;
+				var stampDsc;
+				
+				
+				db.transaction(function (tx) {
+				//populate drop down for unites
+				    tx.executeSql('SELECT * FROM stamp', [], function (tx, results) {
+				        var len = results.rows.length; 
+				        var i=0;
+				        var txt="";
+						
+				        for (i = 0; i < len; i++){
+				        	idStamp=results.rows.item(i).idStamp;
+				        	idCatalog=results.rows.item(i).idCatalog;
+				        	stampDsc=results.rows.item(i).stampDesription;
+				            
+				        	list.innerHTML += idStamp+" broj marke "+idCatalog+" kataloski broj "+stampDsc+" opis marke ";
+				        	
+				        }
+				
+				     }, null);
+				   });	
+				}
+						
+				
+				window.onload = function (){
+				            napraviBazu();
+				        };
+					      
+				
+					</script>
+	</body>
+</html>

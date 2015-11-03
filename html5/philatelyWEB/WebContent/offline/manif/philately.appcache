@@ -1,0 +1,15 @@
+CACHE MANIFEST
+#verzija 1
+
+CACHE:
+../../css5/model5.css
+../../css5/Malaysia.jpg
+../../aplikacijaDodatak/JS/philately.js
+
+
+FALLBACK:
+../webssqAPP3.html
+
+
+NETWORK:
+*

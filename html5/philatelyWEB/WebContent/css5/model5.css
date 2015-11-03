@@ -1,0 +1,169 @@
+
+/* osnovni html tagovi */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 950px;
+    //width:100%;
+    text-align: left;
+    margin: 20px auto;
+    background: #FFFFFF url(Malaysia.jpg) repeat-x left top;
+    display: block;
+
+}
+
+hr {
+    border: 0;
+    background-color: #333;
+    height: 1px;
+}
+
+table {
+    margin: 20px;
+    border-spacing: 0;
+    text-align: center;
+    border: solid 1px #f5eabe;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    display:block;
+   }
+
+a:hover { 
+	text-decoration: underline;
+ }
+
+a:visited { color: inherit; }
+
+img { border: none }
+
+input, select { margin: 5px }
+
+li {
+	list-style-type: none;
+	height: 25px;
+	width: 220px;
+	background-color: rgb(185,122,87);	
+	margin-top:2px;
+	padding-left:20px;	
+	padding-top:5px;		
+ }
+li:hover {
+	list-style-type: none;
+	height: 25px;
+	width: 220px;
+	background-color: rgb(96,60,40);	
+	color: rgb(255,255,255);
+ }
+
+label { line-height: 30px }
+
+label.error {
+    font-size: smaller;
+    line-height: 20px;
+    font-style: italic;
+}
+
+
+/* general styles */
+div {
+	display: block;
+}
+
+header, nav, article, footer{
+	display: block;
+} 
+
+header {
+    //background-color: rgb(234,234,222);
+    opacity:1.0;
+    background-color: rgb(119,73,49);
+    height: 100px;
+    width: 950px;
+}
+
+
+article { 
+	webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-right: 20px;
+	background-color: rgb(224,201,167);
+	float:right;
+	width: 650px;
+	height:450px;
+	border-width:5px;
+	border-style:double;
+	border-color:rgb(185,122,87);
+	overflow:auto;
+
+}
+
+nav { 
+	webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	//background-color: #ADD8E6;
+	padding-left: 20px;
+	padding-top: 20px;
+	background-color: rgb(224,201,167);
+	float:left;
+	width: 290px;
+	height:450px;
+	border-width:5px;
+	border-style:double;
+	border-color:rgb(185,122,87);
+	overflow:auto;
+ }
+
+
+#headerLine{ 
+	clear: both;
+ 	height: 10px;
+	width: 850px;
+
+}
+
+#footerLine { 
+	clear: both;
+ 	height: 10px;
+	width: 850px;
+
+}
+
+
+footer { 
+	clear: both;
+	background-color: rgb(119,73,49);
+ 	height: 100px;
+	width: 950px;
+	//width:100%;
+	position:relative;
+}
+
+//text
+
+p {
+	display: block;
+
+}
+
+h1 {
+	font-size: 14px;
+}
+
+h2 {
+	font-size: 14px;
+	text-decoration: none;
+	text-align: justify;
+}
+
+h3 {
+	font-size: 12px;
+	text-decoration: none;
+	text-align: right;
+}
+
